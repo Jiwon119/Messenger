@@ -1,0 +1,196 @@
+﻿<UserControl x:Class="NetDemo.UserInfoModify"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetDemo"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="500">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/resource.xaml"/>
+    </UserControl.Resources>
+
+    
+    <Grid x:Name="UserInfoModifyGrid">
+        <StackPanel>
+            <Button x:Name="BackBtn"
+                Width="40" Height="40" 
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Margin="30"
+                Style="{StaticResource SettingBtn}"
+                Click="BackBtn_Click">
+                <Image Source="/img/back.png"/>
+            </Button>
+            <TextBlock Style="{StaticResource Title}" 
+                   HorizontalAlignment="Center">
+                Modify<LineBreak/>
+                User Info
+            </TextBlock>
+
+            <StackPanel VerticalAlignment="Center" Margin="0,20,0,0">
+                
+                <StackPanel Width="350">
+                    <TextBlock Style="{StaticResource SignUpTextBlock}" 
+                               Width="auto"
+                               Height="auto"
+                               TextAlignment="Center"
+                               FontSize="23"
+                               Margin="20,20"
+                               Text="본인확인"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Column="0" Grid.Row="0"
+                                   Style="{StaticResource UserInfoModifyTextBlock}" 
+                                   Width="auto"
+                                   Margin="0,10,0,10"
+                                   Text="아이디"/>
+                        
+                        <TextBlock x:Name="UserId" 
+                                   Grid.Column="1"
+                                   VerticalAlignment="Center"
+                                   Margin="10"
+                                   Height="16"/>
+
+                        <TextBlock Grid.Column="0" Grid.Row="1"
+                                   Name="verifyPwBlock"
+                                   Style="{StaticResource UserInfoModifyTextBlock}" 
+                                   Width="auto"
+                                   Margin="0,10,0,10"
+                                   Text="비밀번호"/>
+
+                        <PasswordBox x:Name="verifyPwBox"
+                                     Grid.Column="1" Grid.Row="1"
+                                     Margin="10,0" Width="auto"
+                                     FontSize="15" VerticalContentAlignment="Bottom"
+                                     Style="{StaticResource input_password}" Height="30" VerticalAlignment="Top"/>
+
+                        <Button Style="{StaticResource Btn_small}" 
+                                x:Name="IdentificationBtn" Content="확인"
+                                Grid.Row="2" Grid.ColumnSpan="2"
+                                    Margin="0,10"
+                                Width="150" Height="40"
+                                FontSize="13"
+                                Background="#5E5E5E"
+                                Click="IdentificationBtn_Click"/>
+                    </Grid>
+                </StackPanel>
+
+
+
+                <StackPanel x:Name="ModifyBox" Width="350"
+                        Visibility="Collapsed" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.1*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Column="0" Grid.Row="0"
+                                   Style="{StaticResource UserInfoModifyTextBlock}" 
+                                   TextAlignment="Center"
+                                   FontSize="23"
+                                   Margin="0,20"
+                                   Grid.ColumnSpan="2"
+                                   Text="회원 정보 수정"/>
+
+                        <TextBlock Grid.Column="0" Grid.Row="1"
+                                   Style="{StaticResource UserInfoModifyTextBlock}" 
+                                   Width="auto"
+                                   Margin="0,10,0,10"
+                                   Text="이름"/>
+                        <TextBox x:Name="modifyName"
+                                 Grid.Column="1" Grid.Row="1"
+                                 Margin="0,10,0,0" Width="200"
+                                 FontSize="15" VerticalContentAlignment="Bottom"
+                                 Style="{StaticResource input}" Height="30" VerticalAlignment="Top"/>
+
+                        <TextBlock Grid.Column="0" Grid.Row="2"
+                                   Style="{StaticResource UserInfoModifyTextBlock}" 
+                                   Width="auto"
+                                   Margin="0,10,0,10"
+                                   Text="전화번호"/>
+                        
+                        <TextBox x:Name="modifyPhon"
+                                 Grid.Column="1" Grid.Row="2"
+                                 Margin="0,10,0,0" Width="200"
+                                 FontSize="15" VerticalContentAlignment="Bottom"
+                                 Style="{StaticResource input}" Height="30" VerticalAlignment="Top"/>
+
+                        <TextBlock Grid.Column="0" Grid.Row="3"
+                                   Style="{StaticResource UserInfoModifyTextBlock}" 
+                                   Width="auto"
+                                   Margin="0,10,0,10"
+                                   Text="비밀번호"/>
+
+                        <Button x:Name="PasswordBtn"
+                                Style="{StaticResource Btn_small}"
+                                Background="#9e9e9e"
+                                Click="PasswordBtn_Click"
+                                Height="auto"
+                                Grid.Column="1" Grid.Row="3"
+                                Margin="50,3">
+                            비밀번호 수정
+                        </Button>
+                        
+                        <PasswordBox x:Name="modifyPw"
+                                     Visibility="Collapsed"
+                                     Grid.Column="1" Grid.Row="3"
+                                     Margin="0,10,0,0" Width="200"
+                                     FontSize="15" VerticalContentAlignment="Bottom"
+                                     Style="{StaticResource input_password}" Height="30" VerticalAlignment="Top"/>
+
+                        <TextBlock x:Name="verifyPwTextBlock"
+                                   Grid.Column="0" Grid.Row="4"
+                                   Visibility="Collapsed"
+                                   Style="{StaticResource UserInfoModifyTextBlock}" 
+                                   Width="auto"
+                                   Margin="0,10,0,10"
+                                   Text="비밀번호 확인"/>
+                        
+                        <PasswordBox x:Name="verifyPw"
+                                     Visibility="Collapsed"
+                                     Grid.Column="1" Grid.Row="4"
+                                     Margin="0,10,0,0" Width="200"
+                                     FontSize="15" VerticalContentAlignment="Bottom"
+                                     Style="{StaticResource input_password}" Height="30" VerticalAlignment="Top"/>
+
+
+                        <Button Style="{StaticResource Btn_small}" 
+                                x:Name="ModifyBtn" Content="수정 완료"
+                                Grid.Column="0" Grid.ColumnSpan="2"
+                                Grid.Row="5"
+                                Margin="0,20,0,0"
+                                Width="200" Height="45"
+                                FontSize="16"
+                                Click="ModifyBtn_Click"
+                                Background="#5E5E5E"/>
+                    </Grid>
+
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
+

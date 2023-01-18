@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="NetDemo.ChatRoomList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetDemo"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="500">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/resource.xaml"/>
+    </UserControl.Resources>
+
+    <Grid x:Name="ChatRoomGrid">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="1.3*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0"
+              Background="#F6F6F6">
+                <TextBlock Text="채팅"
+                           FontSize="25"
+                           Margin="30,0"
+                           Style="{StaticResource ListName}"/>
+            </Grid>
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel x:Name="RoomListStack">
+                </StackPanel>
+            </ScrollViewer>
+
+            <DockPanel Grid.Row="2" 
+                   LastChildFill="False" 
+                   Background="#F6F6F6">
+
+                <Button Style="{StaticResource roundBtn}"         
+                    DockPanel.Dock="Right"
+                    Margin="10,0,20,0"
+                    Click="UserListBtnClick">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                    <Image Source="/img/user.png" Margin="10"/>
+                </Button>
+
+                <!--click 지정해줘야함-->
+                <Button Style="{StaticResource roundBtn}"
+                        DockPanel.Dock="Right"
+                        Click="CreateBtnClick"
+                        Margin="10,0">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                    <Image Source="/img/plus.png" Margin="10"/>
+                </Button>
+
+                <!--click 지정해줘야함-->
+                <Button Style="{StaticResource roundBtn}"         
+                    DockPanel.Dock="Right"
+                    Margin="10,0"
+                    Click="ResetBtnClick">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                    <Image Source="/img/reset.png" Margin="10"/>
+                </Button>
+            </DockPanel>
+        </Grid>
+    </Grid>
+</UserControl>

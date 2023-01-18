@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="NetDemo.UserPic"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetDemo"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="500">
+    <Grid x:Name="picGrid">
+
+        <StackPanel Orientation="Vertical">
+            <Button x:Name="BackBtn"
+                Width="40" Height="40" 
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Margin="30"
+                Click="BackBtn_Click">
+                <Image Source="/img/back.png"/>
+            </Button>
+            
+            <Border Width="250" Height="250" BorderBrush="Gray" BorderThickness="1" Background="AliceBlue">
+                <Image x:Name="imgView"></Image>
+            </Border>
+            <Button x:Name="setBtn"
+                Margin="10" Width="150" Height="50"
+                Click="setBtn_Click">사진 선택</Button>
+
+            <Border Width="250" Height="250" BorderBrush="Gray" BorderThickness="1" Background="AliceBlue">
+                <Image x:Name="imgBitmapView">
+
+                </Image>
+            </Border>
+            <Button x:Name="mypic"
+                Margin="10" Width="150" Height="50"
+                Click="mypic_Click">사진 등록</Button>
+            <Button x:Name="mypic_result"
+                Margin="10" Width="150" Height="50"
+                Click="mypic_result_Click">사진 보기</Button>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

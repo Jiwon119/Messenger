@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="NetDemo.UserList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetDemo"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="500">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/resource.xaml"/>
+    </UserControl.Resources>
+    
+    <Grid x:Name="UserListGrid">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="1.3*"/>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0"
+                  Background="#F6F6F6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Border BorderBrush="#7f7f7f" BorderThickness="0.5" 
+                        Grid.Column="0"
+                        Width="60" Height="60" HorizontalAlignment="Left" Margin="10,0"
+                        Opacity="0.5">
+                    <Image x:Name="myImg">
+                    </Image>
+                </Border>
+
+                <TextBlock x:Name="myName"
+                           FontSize="25"
+                           Margin="87,0,30,0"
+                           Style="{StaticResource ListName}"/>
+                
+                <Button x:Name="ModifyBtn"
+                        Grid.Column="1"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Margin="5"
+                        Width="40"
+                        Height="40"
+                        Style="{StaticResource SettingBtn}"
+                        Click="ModifyBtn_Click">
+                    <Image Source="/img/set.png"/>
+                </Button>
+
+                <Button x:Name="PicBtn"
+                        Grid.Column="2"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Margin="5"
+                        Width="35"
+                        Height="35"
+                        Style="{StaticResource SettingBtn}"
+                        Click="PicBtn_Click">
+                    <Image Source="/img/picture.png"/>
+                </Button>
+            </Grid>
+            
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel x:Name="UserListStack">
+                </StackPanel>
+            </ScrollViewer>
+
+            <DockPanel Grid.Row="2" 
+                   LastChildFill="False" 
+                   Background="#F6F6F6">
+                
+                <Button Style="{StaticResource roundBtn}"         
+                        DockPanel.Dock="Left"
+                        Margin="20,0,0,0"
+                        Click="LogoutBtn_Click">
+                    <Image Source="/img/logout.png" Margin="11"/>
+                </Button>
+
+                <Button Style="{StaticResource roundBtn}" 
+                        DockPanel.Dock="Right"
+                        Click="ChatRoomBtn_Click"
+                        Margin="10,0,20,0">
+                        <Image Source="/img/chat.png" Margin="11"/>
+                </Button>
+
+                <Button Style="{StaticResource roundBtn}"         
+                        DockPanel.Dock="Right"
+                        Margin="10,0"
+                        Click="ResetBtn_Click">
+                        <Image Source="/img/reset.png" Margin="10"/>
+                </Button>
+                
+            </DockPanel>
+        </Grid>
+    </Grid>
+</UserControl>

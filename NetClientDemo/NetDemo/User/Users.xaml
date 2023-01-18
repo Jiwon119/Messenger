@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="NetDemo.Users"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetDemo"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="500">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/resource.xaml"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="userImg" 
+               Width="50" Grid.Column="0"
+               HorizontalAlignment="Right"></Image>
+        <TextBlock x:Name="NameText"
+                   Grid.Column="1"
+                   Style="{StaticResource ListName}"/>
+        <TextBlock x:Name="IDText"
+                   Grid.Column="2"
+                   Style="{StaticResource ListID}"/>
+        <Ellipse
+            x:Name="ConnectInfo"
+            Grid.Column="3"
+            Width="10"
+            Height="10"
+            Stroke="Gray"
+            StrokeThickness="10"/>
+
+    </Grid>
+</UserControl>

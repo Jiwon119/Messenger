@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="NetDemo.ChatRoomModify"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetDemo"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="500">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/resource.xaml"/>
+    </UserControl.Resources>
+    <Grid x:Name="CreateGrid">
+        <Button x:Name="BackBtn"
+                Width="40" Height="40" 
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Margin="30"
+                Style="{StaticResource SettingBtn}"
+                Click="BackBtn_Click">
+            <Image Source="/img/back.png"/>
+        </Button>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource Title}" 
+                       Margin="0,0,0,40"
+                       HorizontalAlignment="Center">
+                Modify<LineBreak/>
+                Chat Room
+            </TextBlock>
+
+            <TextBlock Style="{StaticResource SignUpTextBlock}" Text="채팅방 이름"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBox x:Name="ChatRoomName" Margin="0" Width="300" Height="35" 
+                         FontSize="15" VerticalContentAlignment="Bottom"
+                         Style="{StaticResource input}"/>
+            </StackPanel>
+
+            <TextBlock Style="{StaticResource SignUpTextBlock}" Text="방장 변경"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+                <ComboBox x:Name="LeaderChangeComboBox"
+                          Width="130" Height="30"
+                          VerticalContentAlignment="Center"
+                          SelectedIndex="0"
+                          SelectionChanged="LeaderChangeComboBox_SelectionChanged">
+                </ComboBox>
+
+                    <TextBlock x:Name="LeaderText" 
+                               Width="170" TextAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            
+            <TextBlock Style="{StaticResource SignUpTextBlock}" Text="채팅원 강퇴"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <ListView x:Name="RemoveUserList"
+                          SelectionMode="Multiple"
+                          ScrollViewer.VerticalScrollBarVisibility="Visible"
+                          ScrollViewer.CanContentScroll="True"
+                          Width="190" Height="80"
+                          Margin="10"
+                          SelectionChanged ="RemoveUserList_SelectionChanged">
+                </ListView>
+                <ListBox x:Name="RemoveUserSelect"
+                         Width="90" Margin="10"/>
+            </StackPanel>
+            
+            <TextBlock Style="{StaticResource SignUpTextBlock}" Text="채팅원 초대"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <ListView x:Name="AddUserList"
+                          SelectionMode="Multiple"
+                          ScrollViewer.VerticalScrollBarVisibility="Visible"
+                          ScrollViewer.CanContentScroll="True"
+                          Width="190" Height="80"
+                          Margin="10"
+                          SelectionChanged ="AddUserList_SelectionChanged">
+                </ListView>
+                
+                <ListBox x:Name="AddUserSelect" Width="90" Margin="10"/>
+            </StackPanel>
+
+
+            <Button x:Name="ModifyBtn"
+                    Click="ModifyBtn_Click"
+                    Width="300"
+                    Style="{StaticResource Btn}"
+                    Background="#5E5E5E"
+                    Content="수정">
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

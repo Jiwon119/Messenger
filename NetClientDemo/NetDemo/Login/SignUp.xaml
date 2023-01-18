@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="NetDemo.SignUp"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetDemo"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="500">
+    <UserControl.Resources>
+        <ResourceDictionary Source="../resource.xaml"/>
+    </UserControl.Resources>
+
+    <Grid x:Name="SignUpGrid">
+        <Button x:Name="BackBtn"
+                Width="50" Height="50" 
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Style="{StaticResource SettingBtn}"
+                Margin="30" Click="backBtnClick">
+            <Image Source="/img/back.png"/>
+        </Button>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource Title}" 
+                   Margin="0,0,0,40" 
+                   Text="Sign Up"/>
+
+
+
+            <TextBlock Style="{StaticResource SignUpTextBlock}" Text="아이디"/>
+            <TextBox x:Name="newID" Style="{StaticResource input}"></TextBox>
+
+            <TextBlock Style="{StaticResource SignUpTextBlock}" Text="비밀번호"/>
+            <TextBox x:Name="newPW" Style="{StaticResource input}"></TextBox>
+
+            <TextBlock Style="{StaticResource SignUpTextBlock}" Text="이름"/>
+            <TextBox x:Name="newName" Style="{StaticResource input}"></TextBox>
+
+            <TextBlock Style="{StaticResource SignUpTextBlock}" Text="전화번호"/>
+            <TextBox x:Name="newPhon" Style="{StaticResource input}"></TextBox>
+
+
+            <Button Click="SignUpBtn"
+                Width="300"
+                Style="{StaticResource Btn}"
+                Background="#5E5E5E"
+                Content="회원가입">
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

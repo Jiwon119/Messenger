@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="NetDemo.CreateRoom"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetDemo"
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="500">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/resource.xaml"/>
+    </UserControl.Resources>
+
+    <Grid x:Name="CreateGrid">
+        <Button x:Name="BackBtn"
+                Width="40" Height="40" 
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Margin="30"
+                Click="BackBtnClick">
+            <Image Source="/img/back.png"/>
+        </Button>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource Title}" 
+                       Margin="0,0,0,40"
+                       HorizontalAlignment="Center">
+                Create<LineBreak/>
+                Chat Room
+            </TextBlock>
+
+            <TextBlock Style="{StaticResource SignUpTextBlock}" Text="채팅방 이름"/>
+            <TextBox x:Name="ChatRoomName" Style="{StaticResource input}"></TextBox>
+
+            <TextBlock Style="{StaticResource SignUpTextBlock}" Text="유저 선택"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <ListView x:Name="userList"
+                          SelectionMode="Multiple"
+                          ScrollViewer.VerticalScrollBarVisibility="Visible"
+                          ScrollViewer.CanContentScroll="True"
+                          Width="210" Height="150"
+                          Margin="10"
+                          SelectionChanged="Change">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Width="60" Text="{Binding UserName}"/>
+                                <TextBlock Width="60" Text="{Binding UserID}"/>
+                                <Ellipse Grid.Column="2"
+                                         Width="8"
+                                         Height="8"
+                                         Stroke="{Binding ConnInfo}"
+                                         StrokeThickness="5"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <ListBox x:Name="selectedUserListBox" Width="70" Margin="10"/>
+            </StackPanel>
+
+            <Button Click="CreBtnClick"
+                    Width="300"
+                    Style="{StaticResource Btn}"
+                    Background="#5E5E5E"
+                    Content="생성">
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
