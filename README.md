@@ -18,4 +18,8 @@
 
 </br></br>
 <h3 align="center"><b>📀 영상 📀</b></h3>
-[![image](https://github.com/Jiwon119/Messenger/assets/92111247/91b37705-8ae6-4f87-9e09-90f56670ae6f)](https://www.youtube.com/embed/QQRfH2d08tQ?si=mX_0jz9AdclzlnCk)
+<p align="center">
+</p>  
+
+[![image](https://github.com/Jiwon119/Messenger/assets/92111247/89a6b931-dbc5-42e3-bd5b-3e60113af479)](https://www.youtube.com/embed/QQRfH2d08tQ?si=mX_0jz9AdclzlnCk)
+
