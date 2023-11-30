@@ -436,15 +436,6 @@
           "lib/netstandard2.0/NLog.dll": {}
         }
       },
-      "Otp.NET/1.2.2": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Otp.NET.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Otp.NET.dll": {}
-        }
-      },
       "Pomelo.EntityFrameworkCore.MySql/6.0.2": {
         "type": "package",
         "dependencies": {
@@ -1514,20 +1505,6 @@
         "nlog.nuspec"
       ]
     },
-    "Otp.NET/1.2.2": {
-      "sha512": "2hrZfkbzeWJ3tNXXt/1beg4IY+nS4F3gIfh4NVFvW0f6Pj51hGpiJ4prBz7Dmrr4ZYrA96rTERVGieZ4xYm7jA==",
-      "type": "package",
-      "path": "otp.net/1.2.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Otp.NET.dll",
-        "lib/netstandard1.3/Otp.NET.dll",
-        "lib/netstandard2.0/Otp.NET.dll",
-        "otp.net.1.2.2.nupkg.sha512",
-        "otp.net.nuspec"
-      ]
-    },
     "Pomelo.EntityFrameworkCore.MySql/6.0.2": {
       "sha512": "KvlZ800CnEuEGnxj5OT1fCKGjQXxW5kpPlCP91JqBYG+2Z3927eqXmlX6LLKUt4swqE8ZsEQ+Zkpab8bqstf4g==",
       "type": "package",
@@ -2036,7 +2013,6 @@
       "MySqlConnector >= 2.1.12",
       "NLog >= 4.7.14",
       "Newtonsoft.Json >= 13.0.3",
-      "Otp.NET >= 1.2.2",
       "Pomelo.EntityFrameworkCore.MySql >= 6.0.2"
     ]
   },
@@ -2110,10 +2086,6 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
-          },
-          "Otp.NET": {
-            "target": "Package",
-            "version": "[1.2.2, )"
           },
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",

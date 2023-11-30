@@ -29,7 +29,6 @@ C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\bi
 C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\bin\Debug\net6.0\MySqlConnector.dll
 C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\bin\Debug\net6.0\NLog.dll
-C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\bin\Debug\net6.0\Otp.NET.dll
 C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\bin\Debug\net6.0\System.Drawing.Common.dll
@@ -60,3 +59,4 @@ C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\ob
 C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\obj\Debug\net6.0\NetServerDemo.genruntimeconfig.cache
 C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\obj\Debug\net6.0\ref\NetServerDemo.dll
 C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\bin\Debug\net6.0\ref\NetServerDemo.dll
+C:\Users\Jiwon\Desktop\김지원\회사\Messenger\NetServerDemo\NetServerDemo\obj\Debug\net6.0\NetServerDemo.csproj.AssemblyReference.cache
