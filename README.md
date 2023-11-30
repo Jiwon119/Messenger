@@ -15,3 +15,7 @@
 <p align="center">
 <img src="https://github.com/Jiwon119/Messenger/assets/92111247/75ce7939-db98-40c0-b7ea-e84fa855567b"> 
 </p>
+
+</br></br>
+<h3 align="center"><b>📀 영상 📀</b></h3>
+[![image](https://github.com/Jiwon119/Messenger/assets/92111247/91b37705-8ae6-4f87-9e09-90f56670ae6f)](https://www.youtube.com/embed/QQRfH2d08tQ?si=mX_0jz9AdclzlnCk)
