@@ -87,10 +87,18 @@
     <Compile Include="ChatRoom\ChatRoomNotice.xaml.cs">
       <DependentUpon>ChatRoomNotice.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Loggers\NLogger.cs" />
+    <Compile Include="Network\IOPacket.cs" />
+    <Compile Include="Network\NetClient.cs" />
+    <Compile Include="Network\NetConnection.cs" />
+    <Compile Include="Network\NetConnectionPool.cs" />
     <Compile Include="Network\NetProxy.cs" />
     <Compile Include="Login\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Network\NetServer.cs" />
+    <Compile Include="Network\NetTypeDef.cs" />
+    <Compile Include="Network\PacketBuffer.cs" />
     <Compile Include="Notification.cs" />
     <Compile Include="User\UserDetail.xaml.cs">
       <DependentUpon>UserDetail.xaml</DependentUpon>
@@ -258,12 +266,6 @@
     <Resource Include="img\out.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\dotnet_libs\CommonLib\CommonLib.csproj">
-      <Project>{8cca6425-b7a6-4ad6-b7b6-514c7dd35b5d}</Project>
-      <Name>CommonLib</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="img\logout.png" />
   </ItemGroup>
   <ItemGroup>
@@ -282,10 +284,12 @@
     <PackageReference Include="NLog">
       <Version>5.0.2</Version>
     </PackageReference>
+    <PackageReference Include="System.Text.Json">
+      <Version>5.0.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\picture.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

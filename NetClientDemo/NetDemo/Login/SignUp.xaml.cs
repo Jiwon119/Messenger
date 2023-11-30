@@ -1,5 +1,4 @@
-﻿using CommonLib.Network;
-using NetDemo.Network;
+﻿using NetDemo.Network;
 using NetDemo.Util;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;

@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Jiwon\\Desktop\\김지원\\회사\\Messenger\\NetClientDemo\\NetDemo\\NetDemo.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Jiwon\\Desktop\\김지원\\회사\\Messenger\\NetClientDemo\\NetDemo\\NetDemo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jiwon\\Desktop\\김지원\\회사\\Messenger\\NetClientDemo\\NetDemo\\NetDemo.csproj",
+        "projectName": "NetDemo",
+        "projectPath": "C:\\Users\\Jiwon\\Desktop\\김지원\\회사\\Messenger\\NetClientDemo\\NetDemo\\NetDemo.csproj",
+        "packagesPath": "C:\\Users\\Jiwon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jiwon\\Desktop\\김지원\\회사\\Messenger\\NetClientDemo\\NetDemo\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\Jiwon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.Toolkit.Uwp.Notifications": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.1.12, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

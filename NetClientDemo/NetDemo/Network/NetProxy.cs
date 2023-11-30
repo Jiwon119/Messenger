@@ -1,4 +1,4 @@
-﻿using CommonLib.Network;
+﻿using NetDemo.Network;
 using NetDemo.Util;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
-using static CommonLib.Network.SimpleNetClient;
+using static NetDemo.Network.SimpleNetClient;
 
 namespace NetDemo.Network
 {

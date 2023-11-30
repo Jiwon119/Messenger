@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 using NetServerDemo.DB;
 
@@ -29,7 +24,7 @@ namespace NetServerDemo
             connBuilder.Server = ip;
             connBuilder.Port = uint.Parse(port);
             connBuilder.UserID = "root";
-            connBuilder.Password = "1234";
+            connBuilder.Password = "0000";
             connBuilder.Database = "user_info";
             connBuilder.CharacterSet = "utf8";
 
