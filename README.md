@@ -1,4 +1,5 @@
-<h3 align="center"><b>C# (.Net Core, .Net Framework) 과 MySQL, 웹 소켓(Web Socket)을 사용해 만든 실시간 통신 메신저</b></h3>
+<h2 align="center"><b>Messenger</b></h2>
+<h4 align="center"><b>C# (.Net Core, .Net Framework) 과 MySQL, 웹 소켓(Web Socket)을 사용해 만든 실시간 통신 메신저</b></h4>
 </br>
 </br>
 
