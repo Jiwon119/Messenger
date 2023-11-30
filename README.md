@@ -18,6 +18,19 @@
 </p>
 
 </br></br>
+<h3 align="center"><b>:game_die: 주 기능 :game_die:</b></h3>
+<p align="center">
+  <b>
+    - 로그인, 회원가입 등 메신저의 기본 기능</br>
+    - 실시간 통신</br>
+    - 방장 권한 (채팅방 정보 수정, 채팅원 강퇴〮초대)</br>
+    - 알림 기능 (채팅 알림, 채팅방 초대 알림)</br>
+    - 프로필 사진 추가 기능</br>
+  </b>
+</p>
+
+
+</br></br>
 <h3 align="center"><b>📀 영상 📀</b></h3>
 <p align="center">
 </p>  
